@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div class="div-one">
+        <header>
+            <button class="ui-btn minimize" id="min">
+                <svg x="0px" y="0px" viewBox="0 0 10.2 1"><rect x="0" y="50%" width="10.2" height="1" /></svg>
+            </button>
+            <button class="ui-btn maximize" id="max">
+                <svg viewBox="0 0 10 10"><path d="M0,0v10h10V0H0z M9,9H1V1h8V9z" /></svg>
+            </button>
+            <button class="ui-btn close" id="close">
+                <svg viewBox="0 0 10 10"><polygon points="10.2,0.7 9.5,0 5.1,4.4 0.7,0 0,0.7 4.4,5.1 0,9.5 0.7,10.2 5.1,5.8 9.5,10.2 10.2,9.5 5.8,5.1" /></svg>
+            </button>
+            <div class="div-two">
+                <legend>Example | Custom-Electron-Button-Titlebar</legend>
+            </div>
+        </header>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <h1>Lorem ipsum</h1>
+    <br>
+    <p>
+
+    Aliquam faucibus purus in massa tempor. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. <br>
+    Orci a scelerisque purus semper eget. Sapien pellentesque habitant morbi tristique senectus. Porttitor eget <br>
+    dolor morbi non. Eu consequat ac felis donec et. Vitae congue eu consequat ac felis donec et <br>
+    odio. Aliquet sagittis id consectetur purus ut faucibus. Vel turpis nunc eget lorem. A diam maecenas sed <br>
+    enim ut sem. Pretium nibh ipsum consequat nisl vel pretium. Arcu bibendum at varius vel pharetra vel. Egestas erat <br>
+    imperdiet sed euismod nisi porta lorem mollis. Arcu felis bibendum ut tristique et egestas quis.<br>
+        <br><br>
+    Aliquam faucibus purus in massa tempor. Semper auctor neque vitae tempus quam pellentesque nec nam aliquam. <br>
+    Orci a scelerisque purus semper eget. Sapien pellentesque habitant morbi tristique senectus. Porttitor eget <br>
+    dolor morbi non. Eu consequat ac felis donec et. Vitae congue eu consequat ac felis donec et <br>
+    odio. Aliquet sagittis id consectetur purus ut faucibus. Vel turpis nunc eget lorem. A diam maecenas sed <br>
+    enim ut sem. Pretium nibh ipsum consequat nisl vel pretium. Arcu bibendum at varius vel pharetra vel. Egestas erat <br>
+    imperdiet sed euismod nisi porta lorem mollis. Arcu felis bibendum ut tristique et egestas quis.<br>
+
+    </p>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        .div-one {
+            text-align: right;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .div-two {
+            text-align: center;
+            margin-top: -25px;
+        }
+
+        html, body {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        body {
+            background: #afafaf no-repeat fixed center;
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(2px);
+        }
+
+        .ui-btn {
+            margin: 0;
+            width: 48px;
+            height:32px;
+            border: 0;
+            outline: 0;
+            background: transparent;
+        }
+        .ui-btn:hover {
+            background: rgba(255,255,255,.1);
+        }
+        .ui-btn.close:hover {
+            background: #e81123;
+        }
+        .ui-btn svg path, 
+        .ui-btn svg rect, 
+        .ui-btn svg polygon {
+            fill: #fff;
+        }
+        .ui-btn svg {
+        width: 10px;
+        height: 10px;
+        }
+
+    </style>
+    <script>
+        const remote = require('electron').remote;
+
+        document.getElementById("min").addEventListener("click", function (e) {
+            var window = remote.getCurrentWindow();
+            window.minimize(); 
+        });
+
+        document.getElementById("max").addEventListener("click", function (e) {
+            var window = remote.getCurrentWindow();
+            if (!window.isMaximized()) {
+                window.maximize();          
+            } else {
+                window.unmaximize();
+            }
+        });
+
+        document.getElementById("close").addEventListener("click", function (e) {
+            var window = remote.getCurrentWindow()
+            window.close();
+        });
+    </script>
+</body>
+</html>
