@@ -3,4 +3,5 @@
 
 
 Example :
-![Example](https://cdn.discordapp.com/attachments/670684128802242561/771600945846157312/unknown.png)
+
+![](https://cdn.discordapp.com/attachments/670684128802242561/771600945846157312/unknown.png)
