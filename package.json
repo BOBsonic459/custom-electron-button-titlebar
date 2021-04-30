@@ -4,7 +4,7 @@
   "description": "this directory is a piece of useful code that allows you to create maximize, minimize and close cutom button in electron without jQuery or other lib",
   "main": "index.js",
   "dependencies": {
-    "electron": "^10.1.5"
+    "electron": "^10.2.0"
   },
   "devDependencies": {},
   "scripts": {
